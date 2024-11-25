@@ -1,0 +1,8 @@
+Header --> navBar
+hero-section (Wlcome Not)
+locations/Activities
+News
+Team Members
+Contacts
+Map
+Footer
