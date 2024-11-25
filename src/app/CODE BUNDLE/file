@@ -1,0 +1,108 @@
+<app-header></app-header>
+
+<!-- Template Driven Form -->
+<div class="flex items-center justify-center h-screen bg-gradient-to-br from-blue-100 to-blue-50">
+  <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg z-10">
+    <h2 class="text-3xl font-bold text-center mb-6">Login</h2>
+
+    <!-- Template-driven form -->
+    <form #templateForm="ngForm" (ngSubmit)="onTemplateSubmit(templateForm)">
+      <!-- Email Field -->
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          name="email"
+          ngModel
+          #templateEmail="ngModel"
+          required
+          email
+          placeholder="Email"
+        />
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-error *ngIf="templateEmail.invalid && templateEmail.touched">
+          Please enter a valid email.
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Password Field -->
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          name="password"
+          ngModel
+          #templatePassword="ngModel"
+          required
+          minlength="6"
+          placeholder="Password"
+        />
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-error *ngIf="templatePassword.invalid && templatePassword.touched">
+          Password must be at least 6 characters long.
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Submit Button -->
+      <button
+        mat-raised-button
+        color="primary"
+        class="w-full"
+        type="submit"
+        [disabled]="!templateForm.valid"
+      >
+        Login
+      </button>
+    </form>
+
+    <hr class="my-6">
+
+    <!-- Reactive Form -->
+    <form [formGroup]="reactiveForm" (ngSubmit)="onReactiveSubmit()">
+      <!-- Email Field -->
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          formControlName="email"
+          placeholder="Email"
+        />
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-error *ngIf="reactiveForm.get('email')?.invalid && reactiveForm.get('email')?.touched">
+          Please enter a valid email.
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Password Field -->
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          formControlName="password"
+          placeholder="Password"
+        />
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-error *ngIf="reactiveForm.get('password')?.invalid && reactiveForm.get('password')?.touched">
+          Password must be at least 6 characters long.
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Submit Button -->
+      <button
+        mat-raised-button
+        color="primary"
+        class="w-full"
+        type="submit"
+        [disabled]="!reactiveForm.valid"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,66 @@
+<app-header></app-header>
+<!-- Templte Driven Form-->
+<div class="flex items-center justify-center h-screen bg-gradient-to-br from-blue-100 to-blue-50 ">
+  <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg z-10">
+    <h2 class="text-3xl font-bold text-center mb-6">Login</h2>
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label class="block text-black" for="email">Email</label>
+        <input type="email" formControlName="email" placeholder="Enter Email"
+          class="mt-1 block w-full p-3 border border-gray-300 rounded">
+        <p *ngIf="reactiveForm.get('email')?.invalid && reactiveForm.get('email')?.touched" class="text-red-600 font-semibold">
+          *Please Enter a
+          valid
+          Email</p>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700" for="password">Password</label>
+        <input type="password" formControlName="password" placeholder="Enter Password"
+          class="mt-1 block w-full p-3 border border-gray-300 rounded" placeholder="Password" required>
+        <p *ngIf="reactiveForm.get('password')?.invalid && reactiveForm.get('password')?.touched"
+          class="text-red-600 bolder font-semibold">
+          *Password must be atleast 6 characters long</p>
+      </div>
+      <button type="submit" color="red" [disabled]="!reactiveForm.valid" type="submit"
+        class="w-full bg-gradient-to-br from-blue-400 via-blue-900 to-green-500  text-white p-3 rounded hover:bg-blue-600 transition duration-200">Login</button>
+      <!--<p class="mt-4 text-center">Don't have an account? <a href="#" class="text-blue-500 hover:underline">Sign Up</a>
+      </p>-->
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>
+
+
+<!--<app-header></app-header>
+<div class="flex items-center justify-center h-screen bg-gradient-to-br from-blue-100 to-blue-50 ">
+  <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg z-10">
+    <h2 class="text-3xl font-bold text-center mb-6">Login</h2>
+    <!-- THE REACTIVE FORM
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="w-full" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" placeholder="Enter Email">
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-error *ngIf="reactiveForm.get('email')?.invalid && reactiveForm.get('email')?.touched">*Please Enter a
+          valid
+          Email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" placeholder="Enter Password">
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-error *ngIf="reactiveForm.get('password')?.invalid && reactiveForm.get('password')?.touched">*Password must
+          be
+          atleast 6 characters long</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button class="w-full" type="submit" color="red" [disabled]="!reactiveForm.valid">Login</button>
+      <!--<button type="submit" [ngClass]="{'color: '}" color="primary" [disabled]="!reactiveForm.valid">Login</button>
+    </form>
+
+  </div>
+</div>
+
+
+<app-footer></app-footer>-->
