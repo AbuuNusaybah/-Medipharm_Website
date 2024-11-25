@@ -1,0 +1,182 @@
+<!-- ANOTHER THIRD CONTENT
+
+<div class="h-screen flex bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+  <!-- Left Panel: Main Video Player
+  <div class="flex-1 flex flex-col items-center justify-center p-4">
+    <h1 class="text-2xl font-bold mb-4">{{ currentVideo.title }}</h1>
+    <video class="w-full max-w-2xl rounded-lg shadow-lg border-4 border-green-500" controls autoplay
+      [src]="currentVideo.url"></video>
+    <p class="text-gray-400 mt-2">Enjoy the best moments of {{ currentVideo.title }}</p>
+  </div>
+
+  <!-- Right Panel: Thumbnail Gallery
+  <div class="w-1/4 bg-gray-800 overflow-y-auto p-4 space-y-4">
+    <h2 class="text-xl font-semibold mb-2">More Videos</h2>
+    <div *ngFor="let video of videos" class="flex items-center space-x-4 p-2 hover:bg-gray-700 rounded cursor-pointer"
+      (click)="changeVideo(video)">
+      <video
+        class="w-16 h-16 rounded-lg border-2 border-gray-700 hover:border-green-500 transition-transform transform hover:scale-105 shadow-md"
+        muted autoplay loop [src]="video.url"></video>
+      <p class="flex-1 text-sm font-medium">{{ video.title }}</p>
+    </div>
+  </div>
+</div>-->
+
+
+
+<!-- AOTHER FOURTH
+
+<div class="h-screen flex bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+  <!-- Left Panel: Main Video Player
+  <div class="flex-1 flex flex-col items-center justify-center p-4">
+    <h1 class="text-2xl font-bold mb-4">{{ currentVideo.title }}</h1>
+    <video class="w-full max-w-2xl rounded-lg shadow-lg border-4 border-green-500" controls autoplay
+      [src]="currentVideo.url"></video>
+    <p class="text-gray-400 mt-2">Enjoy the best moments of {{ currentVideo.title }}</p>
+  </div>
+
+  <!-- Right Panel: Thumbnail Gallery
+  <div class="w-1/4 bg-gray-800 overflow-y-auto p-4 space-y-4">
+    <h2 class="text-xl font-semibold mb-2">More Videos</h2>
+    <div *ngFor="let video of videos" class="flex items-center space-x-4 p-2 hover:bg-gray-700 rounded cursor-pointer"
+      (click)="changeVideo(video)">
+      <video
+        class="w-16 h-16 rounded-lg border-2 border-gray-700 hover:border-green-500 transition-transform transform hover:scale-105 shadow-md"
+        muted autoplay loop [src]="video.url"></video>
+      <p class="flex-1 text-sm font-medium">{{ video.title }}</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ANOTHER THREE VIDEOS
+
+<div class="h-screen bg-gradient-to-t from-gray-900 to-gray-700 text-white flex flex-col items-center p-6">
+  <h1 class="text-3xl font-bold mb-6">Video Carousel</h1>
+  <!-- Featured Video
+  <div class="w-3/4 mb-6">
+    <video class="w-full rounded-lg shadow-xl border-4 border-purple-500" controls autoplay
+      [src]="currentVideo.url"></video>
+    <p class="text-center mt-2 text-lg font-medium">{{ currentVideo.title }}</p>
+  </div>
+
+  <!-- Video Carousel
+  <div class="w-full overflow-x-auto flex space-x-4 p-4">
+    <div *ngFor="let video of videos" class="w-40 flex-shrink-0 group cursor-pointer" (click)="changeVideo(video)">
+      <video
+        class="rounded-lg shadow-md border-2 border-gray-600 group-hover:border-purple-500 transition-transform transform group-hover:scale-105"
+        muted autoplay loop [src]="video.url"></video>
+      <p class="text-center mt-2 text-sm group-hover:text-purple-500">{{ video.title }}</p>
+    </div>
+  </div>
+</div>-->
+
+
+
+<!-- TAKE A LOOK ON THE BELOW
+
+<div class="h-screen bg-gradient-to-bl from-gray-800 to-gray-900 text-white p-6">
+  <h1 class="text-4xl font-bold text-center mb-6">Masonry Video Gallery</h1>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div *ngFor="let video of videos" [ngClass]="video.size" class="relative group cursor-pointer"
+      (click)="changeVideo(video)">
+      <video
+        class="w-full h-full rounded-lg shadow-lg border-2 border-gray-600 group-hover:border-blue-500 transition-transform transform group-hover:scale-105"
+        muted autoplay loop [src]="video.url"></video>
+      <p class="absolute bottom-2 left-2 bg-black/50 text-white text-sm rounded px-2 group-hover:bg-blue-500">
+        {{ video.title }}
+      </p>
+    </div>
+  </div>
+</div>-->
+
+
+
+<!-- ANOTHER ONE HERE BELOW
+<div class="h-screen bg-gradient-to-tr from-gray-700 to-black text-white p-8">
+  <h1 class="text-3xl font-bold text-center mb-8">Minimalist Video List</h1>
+  <div class="space-y-6">
+    <div *ngFor="let video of videos" class="relative rounded-lg overflow-hidden cursor-pointer group"
+      (click)="changeVideo(video)">
+      <video
+        class="w-full h-48 rounded-lg border-2 border-gray-600 group-hover:border-green-500 transition-transform transform group-hover:scale-105"
+        muted autoplay loop [src]="video.url"></video>
+      <div
+        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+        <p class="text-white text-lg font-bold">{{ video.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+<!-- Another one
+<div class="h-screen bg-gradient-to-bl from-purple-900 to-gray-900 flex flex-col items-center text-white">
+  <h1 class="text-5xl font-bold my-6">Spotlight Viewer</h1>
+  <!-- Main Video
+  <div class="relative w-3/4 h-96 rounded-lg overflow-hidden shadow-xl mb-8">
+    <video class="w-full h-full object-cover" autoplay controls [src]="currentVideo.url"></video>
+    <p class="absolute bottom-3 left-3 bg-black/70 px-4 py-1 rounded">{{ currentVideo.title }}</p>
+  </div>
+
+  <!-- Rotating Thumbnails
+  <div class="relative flex space-x-6 overflow-hidden">
+    <div *ngFor="let video of videos"
+      class="relative group w-36 h-36 flex-shrink-0 rounded-full border-4 border-gray-700 hover:border-pink-500 transition-transform transform hover:scale-110"
+      (click)="changeVideo(video)">
+      <video class="w-full h-full object-cover rounded-full" muted autoplay loop [src]="video.url"></video>
+      <div
+        class="absolute inset-0 bg-black/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+        <p class="text-sm">{{ video.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+<!-- THE USE OF
+
+<div class="h-screen bg-gray-800 text-white flex flex-col items-center">
+  <h1 class="text-3xl font-extrabold my-6">Magazine Slider</h1>
+  <div class="overflow-y-scroll h-5/6 w-4/5">
+    <div *ngFor="let video of videos"
+      class="relative flex items-center bg-gray-700 mb-4 rounded-lg overflow-hidden shadow-lg group">
+      <video class="w-1/2 h-48 object-cover group-hover:scale-105 transition-transform duration-300" autoplay muted loop
+        [src]="video.url"></video>
+      <div class="p-6">
+        <h2 class="text-2xl font-semibold">{{ video.title }}</h2>
+        <p class="text-gray-300 mt-2">{{ video.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+
+<!--ENALE FTHE DESIGN -->
+
+<!--<div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-100 to-blue-300">
+  <!-- Main Video Display
+  <div class="w-3/5 bg-white rounded-lg shadow-lg p-4">
+    <h2 class="text-center text-2xl font-bold mb-4">{{ currentVideo.title }}</h2>
+    <video class="w-full h-auto rounded-lg border border-gray-200 shadow" controls autoplay
+      [src]="currentVideo.url"></video>
+  </div>
+
+  <!-- Video Thumbnails with Animations
+  <div class="w-2/5 flex flex-wrap justify-center gap-4 p-4">
+    <div *ngFor="let video of videos" (click)="changeVideo(video)"
+      class="cursor-pointer hover:scale-105 transition-transform duration-300 relative"
+      [class.border-red-500]="video.id === currentVideo.id">
+      <video class="w-32 h-20 rounded-lg border-2 border-gray-300 shadow-md hover:border-blue-500 animate-pulse" muted
+        loop autoplay [src]="video.url"></video>
+      <div class="absolute top-0 left-0 w-full h-full rounded-lg border animate-spin-slow"
+        *ngIf="video.id !== currentVideo.id"></div>
+    </div>
+  </div>
+</div>-->
+
+
+
+
