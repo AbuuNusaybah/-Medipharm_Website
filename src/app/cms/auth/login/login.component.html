@@ -8,7 +8,8 @@
         <label class="block text-black" for="email">Email</label>
         <input type="email" formControlName="email" placeholder="Enter Email"
           class="mt-1 block w-full p-3 border border-gray-300 rounded">
-        <p *ngIf="reactiveForm.get('email')?.invalid && reactiveForm.get('email')?.touched" class="text-red-600 font-semibold">
+        <p *ngIf="reactiveForm.get('email')?.invalid && reactiveForm.get('email')?.touched"
+          class="text-red-600 font-semibold">
           *Please Enter a
           valid
           Email</p>
@@ -21,8 +22,8 @@
           class="text-red-600 bolder font-semibold">
           *Password must be atleast 6 characters long</p>
       </div>
-      <button type="submit" color="red" [disabled]="!reactiveForm.valid" type="submit"
-        class="w-full bg-gradient-to-br from-blue-400 via-blue-900 to-green-500  text-white p-3 rounded hover:bg-blue-600 transition duration-200">Login</button>
+      <a href="/cms-landing"><button type="submit" color="red" [disabled]="!reactiveForm.valid" type="submit"
+          class="w-full bg-gradient-to-br from-blue-400 via-blue-900 to-green-500  text-white p-3 rounded hover:bg-blue-600 transition duration-200">Login</button></a>
       <!--<p class="mt-4 text-center">Don't have an account? <a href="#" class="text-blue-500 hover:underline">Sign Up</a>
       </p>-->
     </form>

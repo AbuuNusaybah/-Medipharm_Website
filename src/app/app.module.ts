@@ -31,6 +31,18 @@ import { MatIconModule } from '@angular/material/icon'; // Import MatIconModule
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VideoContentComponent } from './shared-pages/landing/video-content/video-content.component';
+import { CmsFooterComponent } from './cms/pages/shared/cms-footer/cms-footer.component';
+import { CmsHeaderComponent } from './cms/pages/shared/cms-header/cms-header.component';
+import { CmsSidenavComponent } from './cms/pages/shared/cms-sidenav/cms-sidenav.component';
+import { CmsTopnavComponent } from './cms/pages/shared/cms-topnav/cms-topnav.component';
+import { CmsLandingComponent } from './cms/pages/cms-landing/cms-landing.component';
+import { CmsHomeComponent } from './cms/pages/cms-home/cms-home.component';
+import { CmsPagesComponent } from './cms/pages/cms-pages/cms-pages.component';
+import { CmsImagesComponent } from './cms/pages/cms-images/cms-images.component';
+import { CmsInfoComponent } from './cms/pages/cms-info/cms-info.component';
+import { CmsSettingsComponent } from './cms/pages/cms-settings/cms-settings.component';
+
+
 
 
 @NgModule({
@@ -58,6 +70,16 @@ import { VideoContentComponent } from './shared-pages/landing/video-content/vide
     MovingImagingComponent,
     TemporalTwoComponent,
     VideoContentComponent,
+    CmsFooterComponent,
+    CmsHeaderComponent,
+    CmsSidenavComponent,
+    CmsTopnavComponent,
+    CmsLandingComponent,
+    CmsHomeComponent,
+    CmsPagesComponent,
+    CmsImagesComponent,
+    CmsInfoComponent,
+    CmsSettingsComponent,
   ],
   imports: [
     BrowserModule,
