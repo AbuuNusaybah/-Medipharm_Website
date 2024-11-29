@@ -1,3 +1,4 @@
+import { CmsSidenavComponent } from './cms/pages/shared/cms-sidenav/cms-sidenav.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './shared-pages/landing/landing.component';
@@ -14,6 +15,11 @@ import { LoginComponent } from './cms/auth/login/login.component';
 import { TemporalPageComponent } from './temporal-page/temporal-page.component';
 import { TemporalTwoComponent } from './temporal-two/temporal-two.component';
 import { VideoContentComponent } from './shared-pages/landing/video-content/video-content.component';
+import { CmsLandingComponent } from './cms/pages/cms-landing/cms-landing.component';
+import { CmsFooterComponent } from './cms/pages/shared/cms-footer/cms-footer.component';
+import { CmsHeaderComponent } from './cms/pages/shared/cms-header/cms-header.component';
+import { CmsTopnavComponent } from './cms/pages/shared/cms-topnav/cms-topnav.component';
+import { CmsHomeComponent } from './cms/pages/cms-home/cms-home.component';
 
 const routes: Routes = [
   // Redirect root path to Landing Page
@@ -22,6 +28,13 @@ const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
   // Define the Landing page route
   { path: 'landing', component: LandingComponent },
+  //CMS COMPONENTS
+  { path: 'cms-landing', component: CmsLandingComponent },
+  { path: 'cms-footer', component: CmsFooterComponent },
+  { path: 'cms-header', component: CmsHeaderComponent },
+  { path: 'cms-topnav', component: CmsTopnavComponent },
+  { path: 'cms-sidenav', component: CmsSidenavComponent },
+  {path: 'cms-home', component: CmsHomeComponent},
   // Define any other known routes here below
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
@@ -35,7 +48,7 @@ const routes: Routes = [
   { path: 'temporal', component: TemporalPageComponent },
   { path: 'temporal-two', component: TemporalTwoComponent },
   { path: 'news', component: LatestNewsComponent },
-  {path: 'video-content', component: VideoContentComponent},
+  { path: 'video-content', component: VideoContentComponent },
   // Wildcard route to handle undefined paths and redirect to Not Found page
   { path: '**', component: NotFoundComponent },
 ];

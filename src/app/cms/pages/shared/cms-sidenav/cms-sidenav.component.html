@@ -1,0 +1,42 @@
+<div
+  class="bg-gradient-to-br from-blue-400 via-blue-900 to-green-500 text-white shadow-lg h-full fixed top-0 left-0 transition-all duration-300 flex flex-col"
+  [ngClass]="{
+    'w-64': isSidebarVisible,
+    'w-16': !isSidebarVisible
+  }">
+  <ul class="space-y-2 mt-20 flex-1">
+  <!--class="flex items-center space-x-4 pl-6 pb-2 mt-10 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105" routerLink="/cms-home" routerLinkActive="bg-white-800">-->
+    <li
+      class="flex items-center space-x-4 pl-6 pb-2 mt-10 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105" (click)="navigateTo('home')">
+      <i class="fas fa-home text-lg"></i>
+      <span *ngIf="isSidebarVisible" class="font-medium">Home</span>
+    </li>
+    <li
+      class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105" (click)="navigateTo('pages')">
+      <i class="fa-sharp fa-solid fa-file-lines"></i>
+      <span *ngIf="isSidebarVisible" class="font-medium pl-2">Pages</span>
+    </li>
+    <li
+      class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105" (click)="navigateTo('images')">
+      <i class="fa-regular fa-images"></i>
+      <span *ngIf="isSidebarVisible" class="font-medium">Images</span>
+    </li>
+    <li
+      class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105" (click)="navigateTo('info')">
+      <i class="fas fa-info-circle text-lg"></i>
+      <span *ngIf="isSidebarVisible" class="font-medium">Info</span>
+    </li>
+    <li
+      class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105" (click)="navigateTo('settings')">
+      <i class="fas fa-cog text-lg"></i>
+      <span *ngIf="isSidebarVisible" class="font-medium">Settings</span>
+    </li>
+  </ul>
+  <!-- Logout Button at the Bottom -->
+  <li
+    class="flex items-center space-x-4 pl-6 pb-4 mt-auto hover:bg-red-700 cursor-pointer transition-transform duration-300 hover:scale-105"
+    (click)="logout()">
+    <i class="fas fa-sign-out-alt text-lg"></i>
+    <span *ngIf="isSidebarVisible" class="font-medium">Logout</span>
+  </li>
+</div>

@@ -1,0 +1,17 @@
+<nav class="bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center justify-between p-4 shadow-lg">
+  <!-- Left Side: Logo and Toggle -->
+  <div class="flex items-center">
+    <button (click)="toggleSidebar()"
+      class="mr-4 text-2xl rounded-full bg-blue-500 p-2 hover:bg-blue-700 transition-transform duration-300 transform hover:scale-110"
+      aria-label="Toggle Sidebar">
+      <i class="fas fa-bars"></i>
+    </button>
+    <h1 class="text-xl font-bold tracking-wide">CMS Dashboard</h1>
+  </div>
+
+  <!-- Right Side: User Info -->
+  <div class="flex items-center space-x-4">
+    <p class="text-lg font-medium">Welcome, <span class="font-bold">User</span></p>
+    <img src="https://via.placeholder.com/40" alt="User Avatar" class="rounded-full w-10 h-10 border-2 border-white" />
+  </div>
+</nav>

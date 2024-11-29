@@ -1,0 +1,42 @@
+<div class="flex h-screen overflow-hidden">
+  <!-- Sidebar -->
+  <app-cms-sidenav [isSidebarVisible]="isSidebarVisible" (navigate)="handleNavigation($event)"></app-cms-sidenav>
+
+  <!-- Main Content -->
+  <div class="flex-1 flex flex-col bg-gradient-to-tr from-blue-50 to-white transition-all duration-300"
+    [ngClass]="{ 'ml-64': isSidebarVisible, 'ml-16': !isSidebarVisible }">
+    <!-- Header -->
+    <app-cms-header class="fixed w-full z-50"></app-cms-header>
+
+    <!-- Toggle Button -->
+    <button (click)="toggleSidebar()"
+      class="absolute top-4 left-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-md hover:bg-blue-700 transition-transform duration-300 transform hover:scale-110"
+      aria-label="Toggle Sidebar">
+      <!--<i class="fas fa-bars text-xl"></i>-->CMS
+    </button>
+
+    <!-- Landing Page Content -->
+    <main class="flex-1 mt-16 overflow-y-auto p-8 text-justify">
+      <section class="space-y-8">
+        <h1
+          class="text-3xl font-bold bg-gradient-to-r from-black to-purple-600 text-transparent bg-clip-text animate-fade-in">
+          MSD Content Management System
+        </h1>
+
+
+        <app-cms-home *ngIf="activeComponent === 'home'"></app-cms-home>
+        <app-cms-pages *ngIf="activeComponent === 'pages'"></app-cms-pages>
+        <app-cms-images *ngIf="activeComponent === 'images'"></app-cms-images>
+        <app-cms-settings *ngIf="activeComponent === 'settings'"></app-cms-settings>
+        <app-cms-info *ngIf="activeComponent === 'info'"></app-cms-info>
+        <!--<p *ngIf="activeComponent === 'pages'">Pages Component Placeholder</p>-->
+        <!-- Add more components as needed -->
+
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <app-cms-footer class="fixed bottom-0 w-full"></app-cms-footer>
+  </div>
+</div>
