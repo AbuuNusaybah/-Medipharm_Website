@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class CmsLandingComponent {
   isSidebarVisible: boolean = true;
 
-  activeComponent: string = ''; // Tracks the currently active component
+  activeComponent: string = 'landing'; // Tracks the currently active component
 
   toggleSidebar() {
     this.isSidebarVisible = !this.isSidebarVisible;
