@@ -1,0 +1,115 @@
+<app-cms-paginated-table [data]="data" [columns]="columns" [itemsPerPage]="6" [showAddButton]="true"
+  [showUpdateButton]="true" (addClicked)="onAdd()" (updateClicked)="onUpdate($event)"
+  (pageChanged)="onPageChange($event)"></app-cms-paginated-table>
+
+
+  <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-5 ml-0 mb-10">
+    <h2 class="text-2xl font-semibold mb-4">Welcome</h2>
+    <h2 class="text-2xl font-semibold mb-4">Manage Title and Subtitle</h2>
+
+    <div class="flex space-x-4 mb-6">
+      <!-- Title Field -->
+      <div class="flex-1">
+        <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
+        <input id="title" name="title" type="text" [(ngModel)]="title"
+          class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Enter the title" />
+      </div>
+
+      <!-- Subtitle Field -->
+      <div class="flex-1">
+        <label for="subtitle" class="block text-sm font-medium text-gray-700">Subtitle</label>
+        <input id="subtitle" name="subtitle" type="text" [(ngModel)]="subtitle"
+          class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Enter the subtitle" />
+      </div>
+    </div>
+
+    <div class="flex justify-end space-x-4">
+      <!-- Add Button -->
+      <button *ngIf="!isEditing" (click)="addField()"
+        class="px-4 py-2 bg-gradient-to-br from-blue-400 via-blue-900 to-green-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        Add
+      </button>
+
+      <!-- Update Button -->
+      <button *ngIf="isEditing" (click)="updateField()"
+        class="px-4 py-2 bg-gradient-to-br from-blue-400 via-blue-900 to-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        Update
+      </button>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-5 ml-0 mb-10">
+    <h2 class="text-2xl font-semibold mb-4">Welcome</h2>
+    <h2 class="text-2xl font-semibold mb-4">Manage Title and Subtitle</h2>
+
+    <div class="flex space-x-4 mb-6">
+      <!-- Title Field -->
+      <div class="flex-1">
+        <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
+        <input id="title" name="title" type="text" [(ngModel)]="title"
+          class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Enter the title" />
+      </div>
+
+      <!-- Subtitle Field -->
+      <div class="flex-1">
+        <label for="subtitle" class="block text-sm font-medium text-gray-700">Subtitle</label>
+        <input id="subtitle" name="subtitle" type="text" [(ngModel)]="subtitle"
+          class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Enter the subtitle" />
+      </div>
+    </div>
+
+    <div class="flex justify-end space-x-4">
+      <!-- Add Button -->
+      <button *ngIf="!isEditing" (click)="addField()"
+        class="px-4 py-2 bg-gradient-to-br from-blue-400 via-blue-900 to-green-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        Add
+      </button>
+
+      <!-- Update Button -->
+      <button *ngIf="isEditing" (click)="updateField()"
+        class="px-4 py-2 bg-gradient-to-br from-blue-400 via-blue-900 to-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        Update
+      </button>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-5 ml-0 mb-10">
+    <h2 class="text-2xl font-semibold mb-4">Welcome</h2>
+    <h2 class="text-2xl font-semibold mb-4">Manage Title and Subtitle</h2>
+
+    <div class="flex space-x-4 mb-6">
+      <!-- Title Field -->
+      <div class="flex-1">
+        <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
+        <input id="title" name="title" type="text" [(ngModel)]="title"
+          class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Enter the title" />
+      </div>
+
+      <!-- Subtitle Field -->
+      <div class="flex-1">
+        <label for="subtitle" class="block text-sm font-medium text-gray-700">Subtitle</label>
+        <input id="subtitle" name="subtitle" type="text" [(ngModel)]="subtitle"
+          class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Enter the subtitle" />
+      </div>
+    </div>
+
+    <div class="flex justify-end space-x-4">
+      <!-- Add Button -->
+      <button *ngIf="!isEditing" (click)="addField()"
+        class="px-4 py-2 bg-gradient-to-br from-blue-400 via-blue-900 to-green-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        Add
+      </button>
+
+      <!-- Update Button -->
+      <button *ngIf="isEditing" (click)="updateField()"
+        class="px-4 py-2 bg-gradient-to-br from-blue-400 via-blue-900 to-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        Update
+      </button>
+    </div>
+  </div>

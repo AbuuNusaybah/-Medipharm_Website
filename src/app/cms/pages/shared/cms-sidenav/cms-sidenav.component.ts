@@ -8,15 +8,20 @@ import { Router } from '@angular/router';
 })
 export class CmsSidenavComponent {
   @Input() isSidebarVisible: boolean = true;
+  isDropdownOpen = false; // Controls dropdown visibility
+
   @Output() navigate = new EventEmitter<string>();
 
   constructor(private router: Router) {}
 
-
-  navigateTo(component: string){
+  navigateTo(component: string) {
     this.navigate.emit(component);
   }
 
+  // Toggle the dropdown visibility
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
 
 
   logout() {

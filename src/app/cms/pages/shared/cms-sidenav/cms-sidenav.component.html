@@ -5,33 +5,67 @@
     'w-16': !isSidebarVisible
   }">
   <ul class="space-y-2 mt-20 flex-1">
-  <!--class="flex items-center space-x-4 pl-6 pb-2 mt-10 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105" routerLink="/cms-home" routerLinkActive="bg-white-800">-->
+    <!-- Home Link -->
     <li
-      class="flex items-center space-x-4 pl-6 pb-2 mt-10 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105" (click)="navigateTo('home')">
+      class="flex items-center space-x-4 pl-6 pb-2 mt-10 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105"
+      (click)="navigateTo('home')">
       <i class="fas fa-home text-lg"></i>
       <span *ngIf="isSidebarVisible" class="font-medium">Home</span>
     </li>
+
+    <!-- Contents Dropdown -->
     <li
-      class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105" (click)="navigateTo('pages')">
+      class="flex items-center space-x-3 pl-6 pb-2 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105"
+      (click)="toggleDropdown()">
       <i class="fa-sharp fa-solid fa-file-lines"></i>
-      <span *ngIf="isSidebarVisible" class="font-medium pl-2">Pages</span>
+      <span *ngIf="isSidebarVisible" class="font-medium pl-2">Contents</span>
+      <i *ngIf="isSidebarVisible" [class]="isDropdownOpen ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
     </li>
+
+
+    <!-- Dropdown Links (Only visible when 'isDropdownOpen' is true) -->
+    <ul *ngIf="isDropdownOpen" class="space-y-2 pl-8">
+      <li
+        class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-600 cursor-pointer transition-transform duration-300 hover:scale-105"
+        (click)="navigateTo('welcome-page-content')">
+        <i class="fas fa-handshake text-lg"></i>
+        <span *ngIf="isSidebarVisible" class="font-medium">Welcome Page</span>
+      </li>
+      <li
+        class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-600 cursor-pointer transition-transform duration-300 hover:scale-105"
+        (click)="navigateTo('news-page-content')">
+        <i class="fas fa-newspaper text-lg"></i>
+        <span *ngIf="isSidebarVisible" class="font-medium">News Page</span>
+      </li>
+      <li
+        class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-600 cursor-pointer transition-transform duration-300 hover:scale-105"
+        (click)="navigateTo('activities-page-content')">
+        <i class="fas fa-calendar-alt text-lg"></i>
+        <span *ngIf="isSidebarVisible" class="font-medium">Activities Page</span>
+      </li>
+    </ul>
+
+    <!-- Other Sidebar Links -->
     <li
-      class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105" (click)="navigateTo('images')">
+      class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105"
+      (click)="navigateTo('images')">
       <i class="fa-regular fa-images"></i>
       <span *ngIf="isSidebarVisible" class="font-medium">Images</span>
     </li>
     <li
-      class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105" (click)="navigateTo('info')">
+      class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105"
+      (click)="navigateTo('info')">
       <i class="fas fa-info-circle text-lg"></i>
       <span *ngIf="isSidebarVisible" class="font-medium">Info</span>
     </li>
     <li
-      class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105" (click)="navigateTo('settings')">
+      class="flex items-center space-x-4 pl-6 pb-2 hover:bg-blue-700 cursor-pointer transition-transform duration-300 hover:scale-105"
+      (click)="navigateTo('settings')">
       <i class="fas fa-cog text-lg"></i>
       <span *ngIf="isSidebarVisible" class="font-medium">Settings</span>
     </li>
   </ul>
+
   <!-- Logout Button at the Bottom -->
   <li
     class="flex items-center space-x-4 pl-6 pb-4 mt-auto hover:bg-red-700 cursor-pointer transition-transform duration-300 hover:scale-105"

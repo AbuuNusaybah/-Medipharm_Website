@@ -10,8 +10,7 @@
 
     <!-- Toggle Button -->
     <button (click)="toggleSidebar()"
-      class="absolute top-4 left-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-md hover:bg-blue-700 transition-transform duration-300 transform hover:scale-110"
-      aria-label="Toggle Sidebar">
+      class="absolute top-4 left-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-md border-2 border-black hover:bg-blue-700 transition-transform duration-300 transform hover:scale-110 animate-bounce" style="box-shadow 0 0 0px white" aria-label="Toggle Sidebar">
       <!--<i class="fas fa-bars text-xl"></i>-->CMS
     </button>
 
@@ -22,10 +21,10 @@
         <div *ngIf="activeComponent === 'landing'" class="text-justify">
           <h1
             class="text-3xl font-bold bg-gradient-to-r from-black to-purple-600 text-transparent bg-clip-text animate-fade-in">
-            <span class="text-blue-600 font-semibold"> <strong>MSD Content Management System</strong></span>
+            <span class="text-blue-600 font-semibold"> MSD Content Management System</span>
           </h1>
           <p class="text-lg leading-relaxed bg-gradient-to-l from-blue-100 to-purple-50 p-4 rounded-lg shadow-lg">
-            Welcome to the <strong class="text-blue-600">Medical Stores Department Content Management System
+            Welcome to the <strong class="text-blue-600">MSD Content Management System
               (MSD-CMS)</strong>!
             This
             system empowers administrators to efficiently manage and streamline essential content for Medical Stores
@@ -37,7 +36,7 @@
             <strong>Functions:</strong> Seamlessly create, update, and organize pages, manage images and files,
             customize
             settings, and ensure
-            critical content is always up-to-date.
+            critical content are always up-to-date.
             <br><br>
             As the admin, you are the backbone of this system, ensuring smooth operations and making data accessible to
             the website. Your role is pivotal in keeping the system up to date for the betterment of the company's
@@ -51,6 +50,12 @@
         <app-cms-images *ngIf="activeComponent === 'images'"></app-cms-images>
         <app-cms-settings *ngIf="activeComponent === 'settings'"></app-cms-settings>
         <app-cms-info *ngIf="activeComponent === 'info'"></app-cms-info>
+
+        <!-- DROPDOWNS CONTENT FOR THE pages content-->
+        <app-news-page-content *ngIf="activeComponent === 'news-page-content'"></app-news-page-content>
+        <app-welcome-page-content *ngIf="activeComponent === 'welcome-page-content'"></app-welcome-page-content>
+        <app-activities-page-content *ngIf="activeComponent === 'activities-page-content'"></app-activities-page-content>
+
       </section>
 
     </main>

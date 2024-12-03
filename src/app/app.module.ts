@@ -41,6 +41,10 @@ import { CmsPagesComponent } from './cms/pages/cms-pages/cms-pages.component';
 import { CmsImagesComponent } from './cms/pages/cms-images/cms-images.component';
 import { CmsInfoComponent } from './cms/pages/cms-info/cms-info.component';
 import { CmsSettingsComponent } from './cms/pages/cms-settings/cms-settings.component';
+import { NewsPageContentComponent } from './cms/pages/cms-pages/news-page-content/news-page-content.component';
+import { ActivitiesPageContentComponent } from './cms/pages/cms-pages/activities-page-content/activities-page-content.component';
+import { WelcomePageContentComponent } from './cms/pages/cms-pages/welcome-page-content/welcome-page-content.component';
+import { CmsPaginatedTableComponent } from './cms/pages/shared/cms-paginated-table/cms-paginated-table.component';
 
 
 
@@ -80,6 +84,10 @@ import { CmsSettingsComponent } from './cms/pages/cms-settings/cms-settings.comp
     CmsImagesComponent,
     CmsInfoComponent,
     CmsSettingsComponent,
+    NewsPageContentComponent,
+    ActivitiesPageContentComponent,
+    WelcomePageContentComponent,
+    CmsPaginatedTableComponent
   ],
   imports: [
     BrowserModule,

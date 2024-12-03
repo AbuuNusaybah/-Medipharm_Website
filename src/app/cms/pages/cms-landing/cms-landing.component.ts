@@ -9,7 +9,7 @@ export class CmsLandingComponent {
   isSidebarVisible: boolean = true;
 
   activeComponent: string = 'landing'; // Tracks the currently active component
-
+  
   toggleSidebar() {
     this.isSidebarVisible = !this.isSidebarVisible;
   }
